@@ -1,4 +1,4 @@
-1# Gesture Alphabet Selector
+# Gesture Alphabet Selector
 
 A computer vision hobby project that uses hand tracking to create a gesture controlled circular A to Z alphabet selector.
 
@@ -161,7 +161,7 @@ A working internet connection is required to install the Python dependencies.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gesture-alphabet-selector.git
+git clone https://github.com/Sahilpillai006/gesture-alphabet-selector.git
 ```
 
 ### 2. Move into the project directory
