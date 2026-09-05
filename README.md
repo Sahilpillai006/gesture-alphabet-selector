@@ -46,42 +46,101 @@ Circular A–Z Selector
 Gesture Detection
    ↓
 Word Output
-
+```
 
 ---
 
-Gesture Controls
+## Word Output
 
-Gesture	Action
+Every confirmed letter is added to the current word and displayed on the webcam interface.
 
-☝️ Index finger	Add the currently selected letter
-✌️ Index + middle finger	Add a space
-✊ Closed fist	Clear the current word
+For example:
 
+```text
+Select H
+   ↓
+☝️ Confirm
+   ↓
+H
+
+Select E
+   ↓
+☝️ Confirm
+   ↓
+HE
+
+Select L
+   ↓
+☝️ Confirm
+   ↓
+HEL
+
+Select L
+   ↓
+☝️ Confirm
+   ↓
+HELL
+
+Select O
+   ↓
+☝️ Confirm
+   ↓
+HELLO
+```
+
+The two finger gesture can be used to insert a space between words.
+
+```text
+HELLO
+   ↓
+✌️
+   ↓
+HELLO 
+   ↓
+WORLD
+   ↓
+HELLO WORLD
+```
+
+A closed fist clears the current word.
+
+```text
+HELLO WORLD
+      ↓
+     ✊
+      ↓
+   CLEARED
+```
+
+The final word is displayed directly on the live camera interface.
+
+---
+
+## Gesture Controls
+
+| Gesture | Action |
+|---|---|
+| ☝️ Index finger | Add the currently selected letter |
+| ✌️ Index + middle finger | Add a space |
+| ✊ Closed fist | Clear the current word |
 
 The project uses simple gesture states rather than a machine learning model specifically trained for alphabet recognition.
 
+---
+
+## Technologies Used
+
+* Python
+* OpenCV
+* MediaPipe
+* NumPy
+* Math
 
 ---
 
-Technologies Used
+## Project Structure
 
-Python
-
-OpenCV
-
-MediaPipe
-
-NumPy
-
-Math
-
-
-
----
-
-Project Structure
-
+```text
 gesture-alphabet-selector/
 │
 ├── main.py
@@ -89,53 +148,57 @@ gesture-alphabet-selector/
 ├── requirements.txt
 ├── .gitignore
 └── LICENSE
-
-
----
-
-Requirements
-
-Python 3
-
-Webcam
-
-Working internet connection for installing the required Python packages
-
-
-Python Libraries
-
-OpenCV
-
-MediaPipe
-
-NumPy
-
-
+```
 
 ---
 
-Installation
+## Requirements
 
-Clone the repository:
+### Software
 
+* Python 3
+* OpenCV
+* MediaPipe
+* NumPy
+
+### Hardware
+
+* Computer
+* Webcam
+
+A working internet connection is required to install the Python dependencies.
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/YOUR_USERNAME/gesture-alphabet-selector.git
+```
 
-Move into the project directory:
+### 2. Move into the project directory
 
+```bash
 cd gesture-alphabet-selector
+```
 
-Install the required libraries:
+### 3. Install the required libraries
 
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-Usage
+## Usage
 
 Run the program:
 
+```bash
 python main.py
+```
 
 Allow the application to access your webcam.
 
@@ -143,71 +206,67 @@ Point your index finger around the circular alphabet to select a letter.
 
 Use the supported gestures to construct a word.
 
-Press Esc to exit the application.
-
+Press `Esc` to exit the application.
 
 ---
 
-Limitations
+## Limitations
 
 This project is an experimental hobby project and has some limitations:
 
-Letter selection depends on the position of the index finger relative to the circular interface.
-
-Hand detection can be affected by lighting and camera quality.
-
-Only one hand is processed at a time.
-
-The gesture recognition uses simple landmark position checks.
-
-The system is not intended to replace a conventional keyboard or text input system.
-
-
+* Letter selection depends on the position of the index finger relative to the circular interface.
+* Hand detection can be affected by lighting and camera quality.
+* Only one hand is processed at a time.
+* The gesture recognition uses simple landmark position checks.
+* The system is not intended to replace a conventional keyboard or text input system.
+* The project does not recognize sign language alphabet gestures.
 
 ---
 
-Future Upgrades
+## Future Upgrades
 
 Possible improvements include:
 
-Improve gesture recognition reliability.
-
-Add configurable gesture controls.
-
-Add word suggestions and autocomplete.
-
-Support more advanced text input.
-
-Improve the visual interface.
-
-Add configurable alphabet layouts.
-
-Add support for multiple languages.
-
-Reduce accidental letter selection through gesture stabilization.
-
-
+* Improve gesture recognition reliability.
+* Add configurable gesture controls.
+* Add word suggestions and autocomplete.
+* Support more advanced text input.
+* Improve the visual interface.
+* Add configurable alphabet layouts.
+* Add support for multiple languages.
+* Reduce accidental letter selection through gesture stabilization.
+* Add backspace functionality.
+* Add keyboard or system text input.
+* Add a better letter confirmation mechanism.
 
 ---
 
-Project Background
+## Project Background
 
 This project was created as a personal hobby experiment to explore computer vision, hand tracking, and alternative methods of human computer interaction.
 
 The main idea was to investigate whether hand position and simple gestures could be combined to create a completely touchless alphabet input interface.
 
+---
+
+## Project Status
+
+**Status: Completed Hobby Experiment**
+
+This project was originally developed as a personal hobby project.
+
+The repository preserves the original concept while providing documentation and a cleaner structure for future development.
 
 ---
 
-Author
+## Author
 
-Sahil B Pillai
+**Sahil B Pillai**
 
 Engineer | Robotics & AI Enthusiast
 
-
 ---
 
-License
+## License
 
 This project is open source and available under the MIT License.
