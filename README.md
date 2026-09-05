@@ -1,4 +1,4 @@
-# Gesture Alphabet Selector
+1# Gesture Alphabet Selector
 
 A computer vision hobby project that uses hand tracking to create a gesture controlled circular A to Z alphabet selector.
 
@@ -135,20 +135,6 @@ The project uses simple gesture states rather than a machine learning model spec
 * MediaPipe
 * NumPy
 * Math
-
----
-
-## Project Structure
-
-```text
-gesture-alphabet-selector/
-│
-├── main.py
-├── README.md
-├── requirements.txt
-├── .gitignore
-└── LICENSE
-```
 
 ---
 
